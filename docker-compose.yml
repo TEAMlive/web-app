@@ -1,19 +1,6 @@
 version: '3.8'
 
 services:
-  client:
-    build:
-      context: ./app/client
-      dockerfile: Dockerfile
-    container_name: client
-    restart: always
-    ports:
-      - "5000:5000"
-    stdin_open: true
-    tty: true
-    networks:
-      - my_network
-
   nginx:
     image: nginx:1.26
     container_name: nginx
