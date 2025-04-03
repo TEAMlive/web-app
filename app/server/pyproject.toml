@@ -1,0 +1,31 @@
+[project]
+name = "server"
+version = "1.0.0"
+description = ""
+authors = [
+    {name = "nerma <github.com/nerma-now>"},
+    {name = "extrawave <github.com/extrawave>"}
+]
+requires-python = ">=3.13"
+dependencies = [
+    "sqlalchemy[asyncio] (>=2.0.40,<3.0.0)",
+    "pydantic-settings (>=2.8.1,<3.0.0)",
+    "fastapi[standart] (>=0.115.12,<0.116.0)",
+    "pydantic[email] (>=2.11.1,<3.0.0)",
+    "python-multipart (>=0.0.20,<0.0.21)",
+    "pyjwt[crypto] (>=2.10.1,<3.0.0)",
+    "uvicorn (>=0.34.0,<0.35.0)",
+    "alembic (>=1.15.2,<2.0.0)",
+    "asyncpg (>=0.30.0,<0.31.0)",
+    "bcrypt (>=4.3.0,<5.0.0)",
+]
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
